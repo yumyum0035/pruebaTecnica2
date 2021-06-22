@@ -1,4 +1,4 @@
-# ApiStarwars
+# Star Wars API
 
 ![Screenshot#1](https://github.com/yumyum0035/pruebaTecnica2/blob/main/src/assets/png/Captura%20de%20Pantalla%202021-06-22%20a%20les%2011.43.42.png?raw=true)
 ![Screenshot#2](https://github.com/yumyum0035/pruebaTecnica2/blob/main/src/assets/png/Captura%20de%20Pantalla%202021-06-22%20a%20les%2011.43.51.png?raw=true)
@@ -7,7 +7,7 @@
 ## About
 This a techinical test about getting starship info from the Star Wars API (https://swapi.dev/) and displaying it on site. It also features a small log in / register system that lets you see the starships if you're logged in.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
+Generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3, this project was.     
 
 ## Development server
 
