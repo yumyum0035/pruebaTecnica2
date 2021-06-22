@@ -1,0 +1,29 @@
+<section>
+  <article class="logo">
+    <a [routerLink]="['/']">
+      <img src="../assets/png/sw_logo_stacked.png" alt="">
+    </a>
+  </article>
+  
+  <nav class="login uppercase">
+    <a [routerLink]="['/login']">log in</a>
+    <a [routerLink]="['/register']"> sign up</a>
+    
+  </nav>
+</section>
+
+<nav class="main uppercase">
+  <a class="home"
+    [routerLink]="['']"
+    [routerLinkActive]="['active-link']"
+    [routerLinkActiveOptions]="{ exact: true }">
+    home
+  </a>
+  <a class="starships"
+    [routerLink]="['/starships']"
+    [routerLinkActive]="['active-link']"
+    [routerLinkActiveOptions]="{ exact: true }">
+    starships
+  </a>
+  
+</nav>

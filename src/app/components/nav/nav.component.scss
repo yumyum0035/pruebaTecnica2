@@ -1,0 +1,61 @@
+@use "src/variables" as *;
+
+section {
+  @include grid(0, repeat(3, 33vw), auto, center, center, center);
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+}
+
+.login {
+  grid-column: 3 / 4;
+  justify-self: flex-end;
+  @include flex(row, nowrap, flex-end, center, center);
+  margin: 0 2.5rem;
+
+  a {
+    margin: 0 0.5rem;
+
+    &::before {
+      content: "//";
+      color: $almost-black;
+      margin: 0 0.5rem 0 0;
+    }
+
+    &:first-of-type::before {
+      content: "";
+    }
+  }
+}
+
+.main {
+  border-top: 1px solid $almost-black;
+  border-bottom: 1px solid $almost-black;
+  margin: 1.3rem 0;
+
+  @include flex(row, nowrap, center, center, center);
+
+  a {
+    border: none;
+    border-left: 1px solid $almost-black;
+    padding: 1.3rem 2.3rem;
+
+    &:last-of-type {
+      border-right: 1px solid $almost-black;
+    }
+  }
+
+  .active-link {
+    color: $white;
+    font-weight: bold;
+
+    &.home {
+      border-bottom: 2px $magenta solid;
+    }
+
+    &.starships {
+      border-bottom: 2px $cyan solid;
+    }
+  }
+}

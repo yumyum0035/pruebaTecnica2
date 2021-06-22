@@ -1,0 +1,27 @@
+<div class="container"><h2 class="uppercase">Sign in</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="handleClick()">
+    <p>
+      <input
+        id="email"
+        type="email"
+        placeholder="Email Address"
+        formControlName="email"
+      />
+    </p>
+    <p>
+      <input
+        id="password"
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+    </p>
+  
+    <button class="uppercase" type="submit">Sign in</button>
+  </form>
+  
+  <div *ngIf="needNewUser">
+    <p>Found in our database this e-mail was not, please <a [routerLink]="['/register']">register</a>. Yes, hrrrm.</p>
+  </div>
+</div>

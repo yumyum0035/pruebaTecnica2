@@ -1,0 +1,19 @@
+<div *ngIf="isLogged; else notLogged" class="starships container">
+  <div *ngFor="let starship of starships">
+    <div class="starship-container">
+      <h3 class="uppercase">
+        <a [routerLink]="['/starships-detail/', starship.name]">
+          {{ starship.name }}
+        </a>
+      </h3>
+      <p>{{ starship.model }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #notLogged>
+  <p>
+    Not logged in you are. To view this content,
+    <a [routerLink]="['/login']">log in</a> you must.
+  </p>
+</ng-template>

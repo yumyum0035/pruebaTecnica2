@@ -1,0 +1,17 @@
+@use "src/variables" as *;
+
+* {
+  color: $accent-color;
+}
+
+a {
+  color: $yellow;
+
+  &:hover {
+    color: $white;
+  }
+}
+.extra {
+  width: 70vw;
+  margin: 0 auto;
+}

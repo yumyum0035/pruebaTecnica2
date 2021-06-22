@@ -1,0 +1,25 @@
+<div class="container"><h2 class="uppercase">Create your account</h2>
+
+  <form [formGroup]="registerForm" (ngSubmit)="submit()">
+    <p>
+      <input
+        id="email"
+        type="email"
+        placeholder="Email Address"
+        formControlName="email"
+      />
+    </p>
+    <p>
+      <input
+        id="password"
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+    </p>
+  
+    <button class="uppercase" type="submit">Create account</button>
+  </form>
+
+</div>
+

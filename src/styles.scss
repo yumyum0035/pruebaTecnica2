@@ -1,0 +1,104 @@
+@use 'src/variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: $font;
+  color: $font-color;
+  font-size: 1.6rem;
+  background-color: $background-black;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: $accent-color;
+  margin: 1rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  margin: 1rem;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $side-color;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: $font;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+
+  &:active {
+    color: $font-color;
+    background-color: $side-color;
+  }
+}
+
+input {
+  font-family: $font;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.bold {
+  font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.strike {
+  text-decoration: line-through;
+}
+
+.logo {
+  @include size(20.3rem, 8.8rem);
+  margin: 2.3rem auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.bg-cyan {
+  @include bg-color($cyan, $white);
+}
+.bg-magenta {
+  @include bg-color($magenta, $white);
+}
+.bg-yellow {
+  @include bg-color($yellow, $almost-black);
+}
+.bg-green {
+  @include bg-color($green, $white);
+}
+
+.container {
+  width: 70vw;
+  margin: 0 auto;
+}

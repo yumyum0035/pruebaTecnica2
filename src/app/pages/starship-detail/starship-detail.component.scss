@@ -1,0 +1,25 @@
+@use "src/variables" as *;
+
+.grid {
+  @include grid(1.5rem, repeat(2, 35vw), auto, center, flex-start, center);
+
+  img,
+  h2,
+  .description {
+    grid-column: 1 / 3;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 0.6rem 0.6rem 0 0;
+    border-bottom: #9e4f60 3px solid;
+  }
+}
+
+.flex {
+  @include flex(column, nowrap, center, center, center);
+
+  button {
+    margin: 2.5rem;
+  }
+}

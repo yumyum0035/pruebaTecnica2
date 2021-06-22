@@ -1,0 +1,26 @@
+<div *ngIf="isLogged; else notLogged" class="flex container">
+  <div *ngIf="starship" class="grid">
+    <img src="{{src}}" alt="{{starship.name}}" />
+    <h2 class="uppercase">{{ starship.name }}</h2>
+    <p class="description" *ngIf="description != ''">{{description}}</p>
+  
+    <p>Model: {{ starship.model }}</p>
+    <p>Manufacturer: {{ starship.manufacturer }}</p>
+    <p>Cost in credits: {{ starship.cost_in_credits }}</p>
+    <p>Length: {{ starship.length }}m</p>
+    <p>Atmospheric Speed: {{ starship.max_atmosphering_speed }}</p>
+    <p>Crew: {{ starship.crew }}</p>
+    <p>Passengers: {{ starship.passengers }}</p>
+    <p>Cargo capacity: {{ starship.cargo_capacity }}</p>
+    <p>Consumables: {{ starship.consumables }}</p>
+    <p>Hyperdrive rating: {{ starship.hyperdrive_rating }}</p>
+    <p>MGLT: {{ starship.MGLT }}</p>
+    <p>Class: {{ starship.starship_class }}</p>
+  </div>
+  
+  <button class="bg-yellow" (click)="go('starships')">Return</button>  
+</div>
+
+<ng-template #notLogged>
+  <p>Not logged in you are. To view this content, <a [routerLink]="['/login']">log in</a> you must.</p>
+</ng-template>
